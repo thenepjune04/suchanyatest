@@ -84,17 +84,34 @@ Route::get("gallery/cat" , function(){
 return view("test/cat", $data);
 });
 
-Route::get("/profile/create","ProfileController@create");
-
+Route::get("/profile/create", "ProfileController@create");
 Route::get("/profile/{id}/edit", "ProfileController@edit");
 
 Route::get("/profile/{id}", "ProfileController@show");
-
-Route::get( "/newgallery" , "ProfileController@gallery" );
-
-Route::get( "/newgallery/ant" , "ProfileController@ant" );
-
-Route::get( "/newgallery/bird" , "ProfileController@bird" );
+Route::get("/newgallery", "ProfileController@gallery" );
+Route::get("/newgallery/ant", "ProfileController@ant" );
+Route::get("/newgallery/bird", "ProfileController@bird" );
 
 Route::get('/profile', 'ProfileController@index');
+
+Route::get('/employee', 'EmployeeController@index');
+Route::get("/employee/create", 'EmployeeController@create');
+Route::post("/employee", 'EmployeeController@store');
+Route::get('/employee/{id}', 'EmployeeController@show');
+Route::get("/employee/{id}/edit", 'EmployeeController@edit');
+Route::put("/employee/{id}", 'EmployeeController@update');
+Route::delete('/employee/{id}', 'EmployeeController@destroy');
+
+Route::get('/position', 'PositionController@index');
+Route::get("/position/create", 'PositionController@create');
+Route::post("/position", 'PositionController@store');
+Route::get('/position/{id}', 'PositionController@show');
+Route::get("/position/{id}/edit", 'PositionController@edit');
+Route::put("/position/{id}", 'PositionController@update');
+Route::delete('/position/{id}', 'PositionController@destroy');
+
+
+
+
+
 
