@@ -110,7 +110,13 @@ Route::get("/position/{id}/edit", 'PositionController@edit');
 Route::put("/position/{id}", 'PositionController@update');
 Route::delete('/position/{id}', 'PositionController@destroy');
 
-
+Route::get('/vehicle', 'VehicleController@index');
+Route::get("/vehicle/create", 'VehicleController@create');
+Route::post("/vehicle", 'VehicleController@store');
+Route::get('/vehicle/{id}', 'VehicleController@show');
+Route::get("/vehicle/{id}/edit", 'VehicleController@edit');
+Route::put("/vehicle/{id}", 'VehicleController@update');
+Route::delete('/vehicle/{id}', 'VehicleController@destroy');
 
 
 
